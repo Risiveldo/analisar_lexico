@@ -1,0 +1,7 @@
+            # Tentar encontrar cada padrão de token
+            for pattern, token_type in token_patterns:
+                match = re.match(pattern, linha[pos:])
+                if match:
+                    token = match.group(0)
+                    tipo = token_type
+                    break
